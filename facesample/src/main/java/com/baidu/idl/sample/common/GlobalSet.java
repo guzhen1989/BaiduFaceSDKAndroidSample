@@ -62,8 +62,8 @@ public class GlobalSet {
     private static final String IMPORT_FACES_SAMPLE = "IMPORT_FACES_SAMPLE";
 
     // 默认摄像头分辨率，实际采集的图片和该分辨率是相反的
-    public static final int PREFER_WIDTH = 640;
-    public static final int PERFER_HEIGH = 480;
+    public static final int PREFER_WIDTH = 1280;
+    public static final int PERFER_HEIGH = 720;
 
     // 图片尺寸限制大小
     public static final int pictureSize = 1000000;

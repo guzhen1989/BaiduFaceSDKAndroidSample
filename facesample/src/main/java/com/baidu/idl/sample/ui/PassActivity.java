@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -14,7 +13,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.baidu.idl.facesdk.model.Feature;
-import com.baidu.idl.facesdk.utils.PreferencesUtil;
 import com.baidu.idl.sample.R;
 import com.baidu.idl.sample.callback.ILivenessCallBack;
 import com.baidu.idl.sample.common.GlobalSet;
@@ -27,9 +25,6 @@ import com.baidu.idl.sample.view.BinocularView;
 import com.baidu.idl.sample.view.CircleImageView;
 import com.baidu.idl.sample.view.CirclePercentView;
 import com.baidu.idl.sample.view.MonocularView;
-
-import static com.baidu.idl.sample.common.GlobalSet.TYPE_PREVIEW_ANGLE;
-import static com.baidu.idl.sample.common.GlobalSet.TYPE_PREVIEW_TWO_HUNDERED_SEVENTY_ANGLE;
 
 /**
  * Created by litonghui on 2018/11/17.

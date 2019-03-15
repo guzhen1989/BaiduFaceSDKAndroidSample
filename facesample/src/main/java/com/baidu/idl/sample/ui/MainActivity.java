@@ -66,7 +66,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if (GlobalSet.getLiveStatusValue() == GlobalSet.LIVE_STATUS.NO
                 || GlobalSet.getLiveStatusValue() == GlobalSet.LIVE_STATUS.RGB
                 || GlobalSet.getLiveStatusValue() == GlobalSet.LIVE_STATUS.RGN_NIR
-                ) {
+        ) {
             int number = Camera.getNumberOfCameras();
             if (number == 0) {
                 mLayoutCamera.setVisibility(View.VISIBLE);
@@ -93,7 +93,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                         intent = new Intent(this, IminectRegisterActivity.class);
                     }
                 } else {
-                    intent = new Intent(this, RegisterActivity.class);
+//                    intent = new Intent(this, RegisterActivity.class);
+                    intent = new Intent(this, UsbRegisterActivity.class);
                 }
             } else if (id == R.id.layout_manager && GlobalSet.FACE_AUTH_STATUS == 0) {
                 intent = new Intent(this, UserActivity.class);
@@ -107,7 +108,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                         intent = new Intent(this, IminectPassActivity.class);
                     }
                 } else {
-                    intent = new Intent(this, PassActivity.class);
+//                    intent = new Intent(this, PassActivity.class);
+                    intent = new Intent(this, UsbPassActivity.class);
+
                 }
             } else if (id == R.id.layout_settings) {
                 intent = new Intent(this, SettingActivity.class);

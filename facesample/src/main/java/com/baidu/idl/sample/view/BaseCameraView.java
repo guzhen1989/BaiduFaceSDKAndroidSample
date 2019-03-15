@@ -24,6 +24,7 @@ public class BaseCameraView extends RelativeLayout implements IFaceDetectCallBac
     private int mSizeFour;
     private int mSizeThirty;
     private int leftDisparity = 0;
+    private int topDisparity = 0;
 
     public BaseCameraView(Context context) {
         this(context, null, 0);
@@ -59,6 +60,11 @@ public class BaseCameraView extends RelativeLayout implements IFaceDetectCallBac
         this.leftDisparity = leftDisparity;
     }
 
+    // 获取到摄像头预览区域的左边距
+    public void topDisparity(int topDisparity) {
+        this.topDisparity = topDisparity;
+    }
+
     public void onFaceDetectCallback(final boolean isDetect, final int faceWidth, final int faceHeight,
                                      final int faceCenterX, final int faceCenterY, final int imgWidth,
                                      final int imgHeight) {
@@ -70,7 +76,7 @@ public class BaseCameraView extends RelativeLayout implements IFaceDetectCallBac
                     // faceFrameImg.setVisibility(VISIBLE);
                     long timeStart = System.currentTimeMillis();
                     int viewWidht = getWidth()-leftDisparity*2;
-                    int viewHeght = getHeight();
+                    int viewHeght = getHeight()-topDisparity*2;
                     int frameX = (viewWidht * faceCenterX) / imgWidth;
                     int frameY = (viewHeght * faceCenterY) / imgHeight;
                     int frameW = (viewWidht * faceWidth) / imgWidth;

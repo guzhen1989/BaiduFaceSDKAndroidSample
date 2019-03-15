@@ -9,8 +9,8 @@ public class GlobalDef {
     public static String PACKAGE_NAME;
 
     // Resolution  普通摄像头分辨率
-    public static final int RESOLUTION_X = 640;
-    public static final int RESOLUTION_Y = 480;
+    public static final int RESOLUTION_X = 1280;
+    public static final int RESOLUTION_Y = 720;
 
     public static final int TYPE_COLOR = 1;
     public static final int TYPE_DEPTH = 2;

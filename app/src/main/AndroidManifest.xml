@@ -68,6 +68,8 @@
         <activity android:name="com.baidu.idl.sample.ui.IminectRegisterActivity"/>
         <activity android:name="com.baidu.idl.sample.ui.OrbbecProRegisterActivity"/>
         <activity android:name="com.baidu.idl.sample.ui.OrbbecMiniRegisterActivity"/>
+        <activity android:name="com.baidu.idl.sample.ui.UsbPassActivity"/>
+        <activity android:name="com.baidu.idl.sample.ui.UsbRegisterActivity"/>
 
         <!-- 安全设备指纹接入 start -->
         <activity

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xcustom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:xcustom="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_main"
-    >
+    android:background="@drawable/background_main">
 
     <include
         android:id="@+id/title_bar"
@@ -12,19 +11,19 @@
 
     <RelativeLayout
         android:id="@+id/layout_input"
-        android:layout_below="@+id/title_bar"
         android:layout_width="313dp"
         android:layout_height="133dp"
+        android:layout_below="@+id/title_bar"
         android:layout_centerHorizontal="true"
-        android:visibility="visible"
-        android:layout_marginTop="67dp">
+        android:layout_marginTop="67dp"
+        android:visibility="visible">
+
         <com.baidu.idl.sample.view.DrawView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             xcustom:drawColor="#343966"
             xcustom:drawRoundRadius="17dp"
-            xcustom:drawStyleFill="true">
-        </com.baidu.idl.sample.view.DrawView>
+            xcustom:drawStyleFill="true" />
 
         <TextView
             android:id="@+id/input_name"
@@ -42,22 +41,21 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/input_name"
             android:layout_marginLeft="37dp"
-            android:layout_marginRight="37dp"
             android:layout_marginTop="17dp"
-            android:hint="Jimmy"
-            android:textColor="#AAA7C6"
-            android:layout_toLeftOf="@+id/go_btn"/>
+            android:layout_marginRight="37dp"
+            android:layout_toLeftOf="@+id/go_btn"
+            android:hint="张大帅"
+            android:textColor="#AAA7C6" />
 
         <ImageView
             android:id="@+id/go_btn"
             android:layout_width="17dp"
             android:layout_height="17dp"
-            android:layout_alignParentEnd="true"
             android:layout_below="@id/input_name"
-            android:layout_marginRight="37dp"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="27dp"
-            android:background="@mipmap/ic_go_right"
-           />
+            android:layout_marginRight="37dp"
+            android:background="@mipmap/ic_go_right" />
     </RelativeLayout>
 
     <TextView
@@ -66,25 +64,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_input"
         android:layout_centerHorizontal="true"
-        android:textColor="#7D94FE"
         android:layout_marginTop="30dp"
         android:text="@string/batch_register"
-        android:textSize="12dp"/>
+        android:textColor="#7D94FE"
+        android:textSize="12dp" />
 
-    <include android:id="@+id/regist_result"
+    <include
+        android:id="@+id/regist_result"
         layout="@layout/layout_pass"
-        android:layout_below="@+id/title_bar"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:visibility="invisible"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="25dp"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:id="@+id/layout_camera"
-        android:layout_below="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone"/>
+        android:layout_below="@+id/title_bar"
+        android:visibility="gone" />
 </RelativeLayout>
